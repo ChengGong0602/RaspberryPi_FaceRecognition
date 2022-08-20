@@ -18,7 +18,7 @@ def killGphoto2Process():
             pid = int(line.split(None,1)[0])
             os.kill(pid, signal.SIGKILL)
 
-# shot_date = datetime.now().strftime("%Y-%m-%d") # This has been written to the while True loop.
+shot_date = datetime.now().strftime("%Y-%m-%d") # This has been written to the while True loop.
 # shot_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # This has been written to the while True loop.
 picID = "PiShots"
 
