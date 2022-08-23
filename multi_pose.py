@@ -22,7 +22,8 @@ yolo_model.classes=[0]
 mp_drawing = mp.solutions.drawing_utils
 mp_pose =mp.solutions.pose
 
-video_path ="/content/Best 3 Dancers In The World 2017 - Dytto, Poppin John Dance_Trim.mp4"
+video_path ="Test.mp4"
+video_path = 0
 
 #get the dimension of the video
 cap = cv2.VideoCapture(video_path)
@@ -38,7 +39,7 @@ cap = cv2.VideoCapture(video_path)
 #for webacam cv2.VideoCapture(NUM) NUM -> 0,1,2 for primary and secondary webcams..
 
 #For saving the video file as output.avi
-out = cv2.VideoWriter("output.avi", cv2.VideoWriter_fourcc(*"MJPG"), 20, size)
+out = cv2.VideoWriter("output.avi", cv2.VideoWriter_fourcc(*'MJPG'), 20, size)
 while cap.isOpened():    
     ret, frame = cap.read()
     if not ret:
@@ -78,9 +79,9 @@ while cap.isOpened():
     out.write(image)
 
     ## Code to quit the video incase you are using the webcam             
-    # cv2.imshow('Activity recognition', image)
-    # if cv2.waitKey(10) & 0xFF == ord('q'):
-    #     break
+    cv2.imshow('Activity recognition', image)
+    if cv2.waitKey(10) & 0xFF == ord('q'):
+        break
 
 cap.release()
 out.release()
