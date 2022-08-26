@@ -48,25 +48,19 @@ while cap.isOpened():
     image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     #making image writeable to false improves prediction
     image.flags.writeable = False    
-
-    result = yolo_model(image)    
-    
+    result = yolo_model(image)       
     # Recolor image back to BGR for rendering
     image.flags.writeable = True   
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     # print(result.xyxy)  # img1 predictions (tensor)
-
     #This array will contain crops of images incase we need it 
-    img_list =[]
-    
+    img_list =[]    
     #we need some extra margin bounding box for human crops to be properly detected
     MARGIN=10
-
     for (xmin, ymin, xmax,   ymax,  confidence,  clas) in result.xyxy[0].tolist():
       with mp_pose.Pose(min_detection_confidence=0.3, min_tracking_confidence=0.3) as pose:
         #Media pose prediction ,we are 
         results = pose.process(image[int(ymin)+MARGIN:int(ymax)+MARGIN,int(xmin)+MARGIN:int(xmax)+MARGIN:])
-
         #Draw landmarks on image, if this thing is confusing please consider going through numpy array slicing 
         mp_drawing.draw_landmarks(image[int(ymin)+MARGIN:int(ymax)+MARGIN,int(xmin)+MARGIN:int(xmax)+MARGIN:], results.pose_landmarks, mp_pose.POSE_CONNECTIONS,
                             mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=2), 
