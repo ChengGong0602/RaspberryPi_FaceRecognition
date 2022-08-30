@@ -11,7 +11,11 @@ import signal, os, subprocess
 # whenever we turn on the camera or
 # reboot the raspberry pi
 
-
+def distance_two_points(p1, p2):
+    (x1, y1) = p1
+    (x2, y2) = p2
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+  
 def killGphoto2Process():
     p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
     out, err = p.communicate()
@@ -130,8 +134,8 @@ with mp_face_detection.FaceDetection(
                     cv2.putText(image, str(count), keypoint_px, font, 1, (255, 5, 255), 2, cv2.LINE_AA)
                     # right eye, left eye, nose tip, mouth center, right ear tragion, and left ear tragion
                 # print("xy_points", xy_points[5][1])
-                distance3_5 = math.dist(xy_points[2], xy_points[4])
-                distance3_6 = math.dist(xy_points[2], xy_points[5])                
+                distance3_5 = distance_two_points(xy_points[2], xy_points[4])
+                distance3_6 = distance_two_points(xy_points[2], xy_points[5])                
                 if (xy_points[5][0] < xy_points[1][0] or xy_points[4][0] > xy_points[0][0]):
                     all_look_forward = False
                 else:
