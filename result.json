@@ -1,0 +1,36 @@
+[label_id: 0
+score: 0.8873677849769592
+location_data {
+  format: RELATIVE_BOUNDING_BOX
+  relative_bounding_box {
+    xmin: 0.277314156293869
+    ymin: -0.023641318082809448
+    width: 0.47908422350883484
+    height: 0.638674259185791
+  }
+  relative_keypoints {
+    x: 0.46350133419036865
+    y: 0.153843954205513
+  }
+  relative_keypoints {
+    x: 0.6571123003959656
+    y: 0.1661328822374344
+  }
+  relative_keypoints {
+    x: 0.5882858633995056
+    y: 0.3252508044242859
+  }
+  relative_keypoints {
+    x: 0.5677538514137268
+    y: 0.45170873403549194
+  }
+  relative_keypoints {
+    x: 0.30447983741760254
+    y: 0.18748046457767487
+  }
+  relative_keypoints {
+    x: 0.7068548798561096
+    y: 0.2111961394548416
+  }
+}
+]
