@@ -28,3 +28,70 @@ sudo apt-get install libjasper-dev -y
 sudo apt-get install libqtgui4 –y
 sudo apt-get install libqt4-test –y
 ````
+
+## Gphoto2 configuration settings
+
+Example to use: gphoto2 
+````
+gphoto2 --camera="Canon EOS 60D" --set-config viewfinder=1
+````
+
+
+gphoto2 configuration lists
+
+- syncdatetime
+- uilock
+- autofocusdrive
+- manualfocusdrive
+- cancelautofocus
+- eoszoom
+- eoszoomposition
+- viewfiner
+- eosremoterelease
+- opcode
+- datetime
+- reviewtime
+- output
+- movierecordtarget
+- evfmode
+- ownername
+- artist
+- copyright
+- customfuncex
+- focusinfo
+- autopoweroff
+- depthoffield
+- capturetarget
+- capture
+- serialnumber
+- manufacturer
+- cameramodel
+- deviceversion
+- vendorextension
+- model
+- ptpversion
+- batterylevel
+- Battery level
+- lensname
+- eosserialnumber
+- shuttercounter
+- availableshots
+- imageformat
+- imageformatsd
+- iso
+- whitebalance
+- whitebalanceadjusta
+- whitebalanceadjustb
+- whitebalancexa
+- whitebalancexb
+- colorspace
+- focusmoe
+- storageid
+- autoexposuremode
+- drivemode
+- picturestyle
+- aperture
+- shutterspeed
+- meteringmode
+- bracketmode
+- aeb

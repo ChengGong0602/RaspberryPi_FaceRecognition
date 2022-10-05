@@ -3,6 +3,19 @@ from datetime import datetime
 from sh import gphoto2 as gp
 import signal, os, subprocess
 
+## 1. GET IP Address from database through API of admin
+def get_ip_address(mac_ID):
+    print("Getting IP Address from database...", mac_ID)
+
+def get_screenSaver_data():
+    print("Getting screen Saver data...")
+
+def get_camera_data():
+    print("Getting camera data...")
+
+
+
+
 # Kill the gphoto process that starts
 # whenever we turn on the camera or
 # reboot the raspberry pi
