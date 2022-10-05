@@ -34,7 +34,9 @@ sudo apt-get install libqt4-test –y
 Example to use: gphoto2 
 ````
 gphoto2 --camera="Canon EOS 60D" --set-config viewfinder=1
+gphoto2 --auto-detect --set-config=/main/capturesettings/shutterspeed=0
 ````
+gphoto2 usage exmple:
 
 
 gphoto2 configuration lists
@@ -95,3 +97,5 @@ gphoto2 configuration lists
 - meteringmode
 - bracketmode
 - aeb
+
+

@@ -1,8 +1,8 @@
 from time import sleep
 from datetime import datetime
-from sh import gphoto2 as gp
+# from sh import gphoto2 as gp
 import signal, os, subprocess
-# import gphoto2 as gp
+import gphoto2 as gp
 
 
 clearCommand = ["--folder", "/store_00020001/DCIM/100CANON", \
