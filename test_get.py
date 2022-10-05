@@ -64,4 +64,3 @@ def get_all_configuration():
 killGphoto2Process()
 get_all_configuration()
 
-
