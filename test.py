@@ -10,7 +10,7 @@ clearCommand = ["--folder", "/store_00020001/DCIM/100CANON", \
 triggerCommand = ["--trigger-capture"]
 downloadCommand = ["--get-all-files"]
 getConfigCommand = ["--auto-detect","--list-config"]
-
+setShutterSpeedCommand = ["--auto-detect","--set-config", "shutterspeed=1/100"]
 # folder_name = shot_date + picID
 # save_location = "/home/pi/Desktop/gphoto/images/" + folder_name
 
@@ -63,6 +63,6 @@ def get_all_configuration():
 
 killGphoto2Process()
 gp(triggerCommand)
-gp(getConfigCommand)
+gp(setShutterSpeedCommand)
 
 
