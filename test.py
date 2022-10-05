@@ -62,7 +62,7 @@ def get_all_configuration():
 
 
 killGphoto2Process()
-gp(triggerCommand)
+# gp(triggerCommand)
 gp(setShutterSpeedCommand)
 
 
