@@ -1,27 +1,18 @@
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import (
-    QLabel,
-    QWidget,
-    QApplication,
-    QHBoxLayout,
-)
+import PySimpleGUI as sg                        # Part 1 - The import
 
-application = QApplication([])
+# Define the window's contents
+layout = [  [sg.Text("What's your name?")],     # Part 2 - The Layout
+            [sg.Input()],
+            [sg.Button('Ok')] ]
 
-mainWindow = QWidget()
+# Create the window
+window = sg.Window('Window Title', layout)      # Part 3 - Window Defintion
+                                                
+# Display and interact with the Window
+event, values = window.read()                   # Part 4 - Event loop or Window.read call
 
-mainWindow.setGeometry(0, 0, 350, 400)
-mainWindow.setWindowTitle('Horizontal Layout')
+# Do something with the information gathered
+print('Hello', values[0], "! Thanks for trying PySimpleGUI")
 
-horizontalLayout = QHBoxLayout()
-
-for num in range(6):
-    label = QLabel()
-    pixmap = QPixmap('cat.jpg')
-    label.setPixmap(pixmap)
-    horizontalLayout.addWidget(label)
-
-mainWindow.setLayout(horizontalLayout)
-mainWindow.show()
-
-application.exec()
+# Finish up by removing from the screen
+window.close() 
