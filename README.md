@@ -87,7 +87,7 @@ gphoto2 configuration lists
 - whitebalancexa
 - whitebalancexb
 - colorspace
-- focusmoe
+- focusmode
 - storageid
 - autoexposuremode
 - drivemode
@@ -97,5 +97,3 @@ gphoto2 configuration lists
 - meteringmode
 - bracketmode
 - aeb
-
-
