@@ -1,14 +1,14 @@
 """
-ZetCode PyQt6 tutorial
+ZetCode PyQt5 tutorial
 In this example, we create a custom widget.
 Author: Jan Bodnar
 Website: zetcode.com
 """
 
-from PyQt6.QtWidgets import (QWidget, QSlider, QApplication,
+from PyQt5.QtWidgets import (QWidget, QSlider, QApplication,
         QHBoxLayout, QVBoxLayout)
-from PyQt6.QtCore import QObject, Qt, pyqtSignal
-from PyQt6.QtGui import QPainter, QFont, QColor, QPen
+from PyQt5.QtCore import QObject, Qt, pyqtSignal
+from PyQt5.QtGui import QPainter, QFont, QColor, QPen
 import sys
 
 
